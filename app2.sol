@@ -21,7 +21,7 @@ interface tokenRecipient { function receiveApproval(address _from, uint256 _valu
 
 contract TokenERC20 {
     // Public variables of the token
-    string public name="APP token";
+    string public name = "APP token";
     string public symbol = "APP";
     uint8 public decimals = 18;
     // 18 decimals is the strongly suggested default, avoid changing it
@@ -170,10 +170,10 @@ contract TokenERC20 {
 }
 
 /******************************************/
-/*       ADVANCED TOKEN STARTS HERE       */
+/*       APP TOKEN STARTS HERE       */
 /******************************************/
 
-contract APPtoken is owned, TokenERC20 {
+contract APPTOKEN is owned, TokenERC20 {
 
     uint256 public sellPrice;
     uint256 public buyPrice;
@@ -184,7 +184,7 @@ contract APPtoken is owned, TokenERC20 {
     event FrozenFunds(address target, bool frozen);
 
     /* Initializes contract with initial supply tokens to the creator of the contract */
-    function APPtoken(
+    function APPTOKEN(
         uint256 initialSupply,
         string tokenName,
         string tokenSymbol
@@ -242,3 +242,4 @@ contract APPtoken is owned, TokenERC20 {
         msg.sender.transfer(amount * sellPrice);          // sends ether to the seller. It's important to do this last to avoid recursion attacks
     }
 }
+
