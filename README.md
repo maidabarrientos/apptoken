@@ -1,2 +1,13 @@
 # apptoken
 apptoken
+
+OWNER : 0x19cDFa980e05AE0556570E02670d2041dAE8Fe33
+
+#ZIP -CONTRACT
+0x365080610e03aa5c5693f6B2dD78eE792Ee9a9Cb
+https://etherscan.io/token/0x365080610e03aa5c5693f6b2dd78ee792ee9a9cb#balances
+
+
+#APP CONTRACT
+https://etherscan.io/token/0xc139824910b6bf2678b2d15ebbc8d35e899ad80f
+0xc139824910b6bf2678b2d15ebbc8d35e899ad80f
