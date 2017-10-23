@@ -21,8 +21,8 @@ contract tokenRecipient { function receiveApproval(address from, uint256 value, 
 
 contract token { 
     // Public variables of the token / 
-    string public name = 'APP'; 
-    string public symbol; 
+    string public name = 'Application'; 
+    string public symbol;
     uint8 public decimals; 
     uint256 public totalSupply;
 
