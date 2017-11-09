@@ -9,6 +9,23 @@
 
 pragma solidity 0.4.18;
 
+contract owned {
+    address public owner;
+
+    function owned() public {
+        owner = msg.sender;
+    }
+
+    modifier onlyOwner {
+        require(msg.sender == owner);
+        _;
+    }
+
+    function transferOwnership(address newOwner) onlyOwner public {
+        owner = newOwner;
+    }
+}
+
 import './ERC20TokenInterface.sol';
 
 contract ZIP is ERC20TokenInterface {
@@ -19,8 +36,7 @@ contract ZIP is ERC20TokenInterface {
   string public constant symbol = 'ZIP';
   string public constant version = 'ZIP2.0';
 
-  // One hundred million coins, each divided to up to 10^decimals units.
-  uint256 private constant totalTokens = 1000000000 * (10 ** decimals);
+  uint256 private constant totalTokens = initialSupply * (10 ** decimals);
 
   mapping (address => uint256) public balances; // (ERC20)
   // A mapping from an account owner to a map from approved spender to their allowances.
