@@ -21,7 +21,7 @@ contract tokenRecipient { function receiveApproval(address from, uint256 value, 
 
 contract token { 
     // Public variables of the token / 
-    string public name = 'ZIPTOKEN'; 
+    string public name = 'ZIP TOKEN'; 
     string public symbol = "ZIP"; 
     uint8 public decimals = 2; 
     uint256 public totalSupply;
